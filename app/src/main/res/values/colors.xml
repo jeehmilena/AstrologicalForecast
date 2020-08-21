@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!--KOSMOS COLORS-->
+    <color name="pink_kosmos">#E9A0F2</color>
+    <color name="lyla_kosmos">#7D52D9</color>
+    <color name="dark_purple_kosmos">#332859</color>
+    <color name="light_purple_kosmos">#4744A6</color>
+    <color name="salmon_kosmos">#D96B62</color>
+</resources>
