@@ -4,17 +4,25 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class SignsAdapter internal constructor(
     context: Context
 ) : RecyclerView.Adapter<SignsAdapter.SignsViewHolder>() {
+    private var listOfSigns = listOf<SignsModel>()
     private val inflater: LayoutInflater = LayoutInflater.from(context)
-    private var signs = emptyList<Signs>()
+    private var signs = emptyList<SignsModel>()
 
     inner class SignsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val signImage: ImageView = itemView.findViewById(R.id.image_sign)
+
+        fun bindView(signs: SignsModel) {
+            itemView.findViewById<TextView>(R.id.name_of_sign).text = signs.name
+            Glide.with(itemView.context).load(signs.signImage!!)
+                .into(itemView.findViewById(R.id.image_sign))
+        }
+
 
     }
 
@@ -29,15 +37,14 @@ class SignsAdapter internal constructor(
     }
 
     override fun onBindViewHolder(holder: SignsAdapter.SignsViewHolder, position: Int) {
-        val current = signs[position]
-        // holder.signImage.drawable = current.id
-        TODO("pegar a posição a partir do id do signo")
+        val signHolder = holder as SignsViewHolder
+        signHolder.bindView(listOfSigns[position])
 
     }
 
     override fun getItemCount() = signs.size
 
-    internal fun setSigns(signs: List<Signs>) {
+    fun setSigns(signs: List<SignsModel>) {
         this.signs = signs
         notifyDataSetChanged()
     }

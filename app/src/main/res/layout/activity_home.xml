@@ -13,7 +13,8 @@
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
-        tools:listitem="@layout/item_sign_recyclerview" />
+        tools:listitem="@layout/item_sign_recyclerview"
+        tools:itemCount="3"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
