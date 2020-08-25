@@ -40,6 +40,7 @@ class SignsAdapter internal constructor(
         val signHolder = holder as SignsViewHolder
         signHolder.bindView(listOfSigns[position])
 
+
     }
 
     override fun getItemCount() = signs.size
