@@ -31,8 +31,10 @@ class SignsAdapter internal constructor(
         viewType: Int
     ): SignsAdapter.SignsViewHolder {
 
-        val itemView = inflater.inflate(R.layout.item_sign_recyclerview, parent, false)
-        return SignsViewHolder(itemView)
+        return SignsViewHolder(
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_sign_recyclerview, parent, false)
+        )
 
     }
 
@@ -43,10 +45,10 @@ class SignsAdapter internal constructor(
 
     }
 
-    override fun getItemCount() = signs.size
+    override fun getItemCount(): Int = listOfSigns.size
 
-    fun setSigns(signs: List<SignsModel>) {
-        this.signs = signs
+    fun setSigns(listOfSigns: List<SignsModel>) {
+        this.listOfSigns = listOfSigns
         notifyDataSetChanged()
     }
 

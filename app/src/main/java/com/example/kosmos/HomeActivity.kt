@@ -18,8 +18,8 @@ class HomeActivity : AppCompatActivity() {
     private fun initView() {
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_signs)
         val adapter = SignsAdapter(this)
-        recyclerView.layoutManager = GridLayoutManager(this, 3)
-        recyclerView.addItemDecoration(GridItemDecoration(10, 2))
+        recyclerView.layoutManager = GridLayoutManager(this, 2)
+        recyclerView.addItemDecoration(GridItemDecoration(2, 2))
         recyclerView.adapter = adapter
         adapter.setSigns(generateDummySigns())
 
