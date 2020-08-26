@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".splash.SplashActivity"
-    android:background="@color/dark_purple_kosmos">
+    android:background="@color/dark_purple_kosmos"
+    app:layoutDescription="@xml/activity_splash_scene"
+    tools:context=".splash.SplashActivity">
 
     <ImageView
         android:id="@+id/splashImageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/kosmos_solar_system" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/kosmos_solar_system"
+        tools:layout_editor_absoluteX="295dp"
+        tools:layout_editor_absoluteY="316dp" />
+
+    <TextView
+        android:id="@+id/splashTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KOSMOS"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/splashImageView"
+        app:layout_constraintTop_toTopOf="@+id/splashImageView" />
+</androidx.constraintlayout.motion.widget.MotionLayout>
