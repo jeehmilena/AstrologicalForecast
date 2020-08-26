@@ -1,4 +1,4 @@
-package com.example.kosmos
+package com.example.kosmos.chooseyoursign.view
 
 import android.graphics.Rect
 import android.view.View

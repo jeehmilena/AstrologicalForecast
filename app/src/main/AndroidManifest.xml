@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Kosmos">
-        <activity android:name=".HomeActivity">
+        <activity android:name=".chooseyoursign.view.ChooseYourSignActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
