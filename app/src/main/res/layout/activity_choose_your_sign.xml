@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".chooseyoursign.view.ChooseYourSignActivity">
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_signs"
         android:layout_width="match_parent"
@@ -15,6 +14,5 @@
         tools:layout_editor_absoluteY="1dp"
         tools:listitem="@layout/item_choose_your_sign_recyclerview"
         tools:itemCount="3"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
