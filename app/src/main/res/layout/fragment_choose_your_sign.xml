@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".chooseyoursign.view.ChooseYourSignActivity">
+    tools:context=".chooseyoursign.view.ChooseYourSignFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_signs"
@@ -15,4 +14,4 @@
         tools:listitem="@layout/item_choose_your_sign_recyclerview"
         tools:itemCount="3"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

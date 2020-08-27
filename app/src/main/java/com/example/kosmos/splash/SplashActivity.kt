@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.kosmos.R
-import com.example.kosmos.chooseyoursign.view.ChooseYourSignActivity
+import com.example.kosmos.MainActivity
 import java.util.*
 
 class SplashActivity : AppCompatActivity() {
@@ -23,7 +23,7 @@ class SplashActivity : AppCompatActivity() {
 
     private fun jump() {
         timer.cancel()
-        startActivity(Intent(this@SplashActivity, ChooseYourSignActivity::class.java))
+        startActivity(Intent(this@SplashActivity, MainActivity::class.java))
         finish()
     }
 }
