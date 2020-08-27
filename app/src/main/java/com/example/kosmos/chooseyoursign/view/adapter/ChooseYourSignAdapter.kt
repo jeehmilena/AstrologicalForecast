@@ -35,7 +35,6 @@ class ChooseYourSignAdapter internal constructor(
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.item_choose_your_sign_recyclerview, parent, false)
         )
-
     }
 
     override fun onBindViewHolder(holder: SignsViewHolder, position: Int) {
