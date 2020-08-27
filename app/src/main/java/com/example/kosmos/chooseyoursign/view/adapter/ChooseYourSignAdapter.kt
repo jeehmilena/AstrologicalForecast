@@ -11,7 +11,7 @@ import com.example.kosmos.R
 import com.example.kosmos.chooseyoursign.model.ChooseYourSignModel
 
 class ChooseYourSignAdapter internal constructor(
-    context: Context
+    context: Context?
 ) : RecyclerView.Adapter<ChooseYourSignAdapter.SignsViewHolder>() {
     private var listOfSigns = listOf<ChooseYourSignModel>()
     private val inflater: LayoutInflater = LayoutInflater.from(context)
@@ -24,8 +24,6 @@ class ChooseYourSignAdapter internal constructor(
             Glide.with(itemView.context).load(chooseYourSign.signImage!!)
                 .into(itemView.findViewById(R.id.image_sign))
         }
-
-
     }
 
     override fun onCreateViewHolder(
@@ -43,8 +41,6 @@ class ChooseYourSignAdapter internal constructor(
     override fun onBindViewHolder(holder: SignsViewHolder, position: Int) {
         val signHolder = holder as SignsViewHolder
         signHolder.bindView(listOfSigns[position])
-
-
     }
 
     override fun getItemCount(): Int = listOfSigns.size
@@ -53,6 +49,4 @@ class ChooseYourSignAdapter internal constructor(
         this.listOfSigns = listOfSigns
         notifyDataSetChanged()
     }
-
-
 }
