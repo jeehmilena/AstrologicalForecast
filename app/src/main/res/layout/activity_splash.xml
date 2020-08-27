@@ -12,17 +12,15 @@
         android:id="@+id/splashImageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:srcCompat="@drawable/kosmos_solar_system"
-        tools:layout_editor_absoluteX="295dp"
-        tools:layout_editor_absoluteY="316dp" />
+        app:srcCompat="@drawable/kosmos_solar_system" />
 
     <TextView
         android:id="@+id/splashTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
         android:text="KOSMOS"
         android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/splashImageView"
-        app:layout_constraintTop_toTopOf="@+id/splashImageView" />
+        android:textSize="32sp" />
 </androidx.constraintlayout.motion.widget.MotionLayout>

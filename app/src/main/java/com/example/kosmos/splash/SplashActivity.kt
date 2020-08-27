@@ -18,7 +18,7 @@ class SplashActivity : AppCompatActivity() {
             override fun run() {
                 jump()
             }
-        }, 4000)
+        }, 1500)
     }
 
     private fun jump() {

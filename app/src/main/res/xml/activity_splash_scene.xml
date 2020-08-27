@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:motion="http://schemas.android.com/apk/res-auto"
-    xmlns:app="urn:oasis:names:tc:xliff:document:1.2">
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
 
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="3000"
+        motion:duration="1000"
         motion:motionInterpolator="easeInOut"
         motion:autoTransition="animateToEnd">
         <OnSwipe
@@ -27,22 +26,18 @@
             android:id="@+id/splashImageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginStart="128dp"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
             motion:layout_constraintTop_toTopOf="parent"
-            android:layout_marginLeft="128dp"
-            motion:layout_constraintVertical_bias="0.48" />
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"/>
         <Constraint
             android:id="@+id/splashTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintBottom_toBottomOf="@+id/splashImageView"
-            motion:layout_constraintTop_toTopOf="@+id/splashImageView"
-            motion:layout_constraintEnd_toStartOf="@+id/splashImageView"
-            motion:layout_editor_absoluteX="175dp"
-            motion:layout_editor_absoluteY="349dp" />
+            android:layout_marginStart="16dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"/>
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
@@ -50,20 +45,18 @@
             android:id="@+id/splashImageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="32dp"
+            motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintTop_toTopOf="parent"/>
+            motion:layout_constraintEnd_toEndOf="parent"/>
 
         <Constraint
             android:id="@+id/splashTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintBottom_toBottomOf="@+id/splashImageView"
-            motion:layout_constraintTop_toTopOf="@+id/splashImageView"
-            motion:layout_constraintEnd_toStartOf="@+id/splashImageView"
-            motion:layout_editor_absoluteX="198dp"
-            motion:layout_editor_absoluteY="367dp"/>
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toStartOf="@id/splashImageView"/>
     </ConstraintSet>
 </MotionScene>
