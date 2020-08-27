@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_purple_kosmos"
+    app:layoutDescription="@xml/activity_splash_scene"
+    tools:context=".splash.SplashActivity">
+
+    <ImageView
+        android:id="@+id/splashImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/kosmos_solar_system" />
+
+    <TextView
+        android:id="@+id/splashTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:text="KOSMOS"
+        android:textColor="@color/white"
+        android:textSize="32sp" />
+</androidx.constraintlayout.motion.widget.MotionLayout>
