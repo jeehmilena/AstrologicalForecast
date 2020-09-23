@@ -1,15 +1,14 @@
 package com.example.kosmos.chooseyoursign.data.repository
 
+import com.example.kosmos.chooseyoursign.data.Api
 import com.example.kosmos.chooseyoursign.data.SignModelRequest
-import com.example.kosmos.chooseyoursign.data.SignsServices
 import com.example.kosmos.chooseyoursign.data.coroutines.AppContextProvider
 import kotlinx.coroutines.withContext
-import retrofit2.Call
 
-class SignRepository(val signsServices: SignsServices) {
+class SignRepository(private val api: Api) {
 
-    suspend fun getTheSign(sign: String, day: String): Call<SignModelRequest> =
+    suspend fun getTheSign(sign: String, day: String): SignModelRequest =
         withContext(AppContextProvider.io){
-            signsServices.receiveSigns2(sign,day)
+            api.receiveSigns2(sign,day)
         }
 }
